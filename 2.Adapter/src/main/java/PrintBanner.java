@@ -4,8 +4,10 @@ public class PrintBanner extends Banner implements Print {
     }
     @Override
     public void printWeak() {
+        showWithParen();
     }
     @Override
     public void printStrong() {
+        showWithAster();
     }
 }
