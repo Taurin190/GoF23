@@ -1,11 +1,16 @@
+import java.util.ArrayList;
+
 public class IDCardFactory extends Factory {
+    private ArrayList owners = new ArrayList();
     @Override
     protected Product createProduct(String owner) {
-        return null;
+        return new IDCard(owner);
     }
-
     @Override
     protected void registerProduct(Product product) {
-
+        owners.add((IDCard) product);
+    }
+    public ArrayList getOwners() {
+        return owners;
     }
 }
