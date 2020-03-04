@@ -42,7 +42,7 @@ public class CharDisplayTest {
         charDisplay.close();
         System.out.flush();
         String actual = byteArrayOutputStream.toString();
-        assertEquals(">>", actual);
+        assertEquals(">>\n", actual);
     }
     @Test
     public void displayTest() throws Exception {
@@ -50,6 +50,6 @@ public class CharDisplayTest {
         charDisplay.display();
         System.out.flush();
         String actual = byteArrayOutputStream.toString();
-        assertEquals("<<AAAAA>>", actual);
+        assertEquals("<<AAAAA>>\n", actual);
     }
 }

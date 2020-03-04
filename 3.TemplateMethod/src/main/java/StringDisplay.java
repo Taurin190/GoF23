@@ -1,9 +1,11 @@
+import java.nio.charset.Charset;
+
 public class StringDisplay extends AbstractDisplay{
     private String text;
     private int width;
     public StringDisplay(String text) {
         this.text = text;
-        this.width = text.getBytes().length;
+        this.width = text.getBytes(Charset.forName("Shift_JIS")).length;
     }
     @Override
     public void open() {
