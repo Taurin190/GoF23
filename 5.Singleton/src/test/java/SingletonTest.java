@@ -18,7 +18,7 @@ public class SingletonTest {
         System.setOut(new PrintStream(new BufferedOutputStream(byteArrayOutputStream)));
     }
     @Test
-    public void getInstanceTest() {
+    public void testGetInstance() {
         Singleton singleton = Singleton.getInstance();
         System.out.flush();
         String actual = byteArrayOutputStream.toString();

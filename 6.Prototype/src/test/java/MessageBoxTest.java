@@ -19,7 +19,7 @@ public class MessageBoxTest {
         System.setOut(new PrintStream(new BufferedOutputStream(byteArrayOutputStream)));
     }
     @Test
-    public void useTest() throws Exception {
+    public void testUse() throws Exception {
         MessageBox messageBox = new MessageBox('*');
         messageBox.use("Hello");
         System.out.flush();
@@ -27,7 +27,7 @@ public class MessageBoxTest {
         assertEquals("*********\n* Hello *\n*********\n", actual);
     }
     @Test
-    public void createCloneTest() {
+    public void testCreateClone() {
         MessageBox messageBox = new MessageBox('*');
         MessageBox clonedMessageBox = (MessageBox) messageBox.createClone();
         assertTrue(clonedMessageBox instanceof MessageBox);

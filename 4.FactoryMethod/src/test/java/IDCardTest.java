@@ -17,7 +17,7 @@ public class IDCardTest {
         System.setOut(new PrintStream(new BufferedOutputStream(byteArrayOutputStream)));
     }
     @Test
-    public void useTest() {
+    public void testUse() {
         IDCard idCard = new IDCard("test");
         idCard.use();
         System.out.flush();
@@ -25,7 +25,7 @@ public class IDCardTest {
         assertEquals("testのカードを作ります。\ntestのカードを使います。\n", actual);
     }
     @Test
-    public void getOwnerTest() {
+    public void testGetOwner() {
         IDCard idCard = new IDCard("test");
         String actual = idCard.getOwner();
         assertEquals("test", actual);

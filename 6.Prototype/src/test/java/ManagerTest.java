@@ -18,7 +18,7 @@ public class ManagerTest {
         MockitoAnnotations.initMocks(this);
     }
     @Test
-    public void registerAndCreateTest() throws Exception {
+    public void testRegisterAndCreate() throws Exception {
         Manager manager = new Manager();
         when(productMock1.createClone()).thenReturn(productMock2);
         manager.register("test", productMock1);
@@ -26,7 +26,7 @@ public class ManagerTest {
         assertEquals(productMock2, actual);
     }
     @Test
-    public void registerAndFailToCreateTest() throws Exception {
+    public void testRegisterAndFailToCreate() throws Exception {
         Manager manager = new Manager();
         when(productMock1.createClone()).thenReturn(productMock2);
         manager.register("test1", productMock1);

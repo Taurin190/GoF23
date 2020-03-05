@@ -17,7 +17,7 @@ public class StringDisplayTest {
         System.setOut(new PrintStream(new BufferedOutputStream(byteArrayOutputStream)));
     }
     @Test
-    public void openTest() throws Exception {
+    public void testOpen() throws Exception {
         StringDisplay stringDisplay = new StringDisplay("Hello World");
         stringDisplay.open();
         System.out.flush();
@@ -25,7 +25,7 @@ public class StringDisplayTest {
         assertEquals("+-----------+\n", actual);
     }
     @Test
-    public void printTest() throws Exception {
+    public void testPrint() throws Exception {
         StringDisplay stringDisplay = new StringDisplay("Hello World");
         stringDisplay.print();
         System.out.flush();
@@ -33,7 +33,7 @@ public class StringDisplayTest {
         assertEquals("|Hello World|\n", actual);
     }
     @Test
-    public void closeTest() throws Exception {
+    public void testClose() throws Exception {
         StringDisplay stringDisplay = new StringDisplay("Hello World");
         stringDisplay.close();
         System.out.flush();
@@ -41,7 +41,7 @@ public class StringDisplayTest {
         assertEquals("+-----------+\n", actual);
     }
     @Test
-    public void displayTest() throws Exception {
+    public void testDisplay() throws Exception {
         StringDisplay stringDisplay = new StringDisplay("Hello World");
         stringDisplay.display();
         System.out.flush();

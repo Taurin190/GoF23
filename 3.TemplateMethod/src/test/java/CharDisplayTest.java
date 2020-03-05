@@ -17,7 +17,7 @@ public class CharDisplayTest {
         System.setOut(new PrintStream(new BufferedOutputStream(byteArrayOutputStream)));
     }
     @Test
-    public void openTest() throws Exception {
+    public void testOpen() throws Exception {
         CharDisplay charDisplay = new CharDisplay("A");
         charDisplay.open();
         System.out.flush();
@@ -25,7 +25,7 @@ public class CharDisplayTest {
         assertEquals("<<", actual);
     }
     @Test
-    public void printTest() throws Exception {
+    public void testPrint() throws Exception {
         CharDisplay charDisplay = new CharDisplay("A");
         charDisplay.print();
         System.out.flush();
@@ -33,7 +33,7 @@ public class CharDisplayTest {
         assertEquals("A", actual);
     }
     @Test
-    public void closeTest() throws Exception {
+    public void testClose() throws Exception {
         CharDisplay charDisplay = new CharDisplay("A");
         charDisplay.close();
         System.out.flush();
@@ -41,7 +41,7 @@ public class CharDisplayTest {
         assertEquals(">>\n", actual);
     }
     @Test
-    public void displayTest() throws Exception {
+    public void testDisplay() throws Exception {
         CharDisplay charDisplay = new CharDisplay("A");
         charDisplay.display();
         System.out.flush();

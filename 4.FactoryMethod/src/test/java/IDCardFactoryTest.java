@@ -28,7 +28,7 @@ public class IDCardFactoryTest {
         MockitoAnnotations.initMocks(this);
     }
     @Test
-    public void createProductTest() {
+    public void testCreateProduct() {
         Product idCard = new IDCardFactory().createProduct("test");
         idCard.use();
         System.out.flush();
@@ -36,7 +36,7 @@ public class IDCardFactoryTest {
         assertEquals("testのカードを作ります。\ntestのカードを使います。\n", actual);
     }
     @Test
-    public void registerAndGetOwners() {
+    public void testRegisterAndGetOwners() {
         IDCardFactory factory = new IDCardFactory();
         when(idCardMock1.getOwner()).thenReturn("test1");
         when(idCardMock2.getOwner()).thenReturn("test2");
