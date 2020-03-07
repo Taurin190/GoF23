@@ -9,6 +9,15 @@ public class ListTray extends Tray {
 
     @Override
     public String makeHTML() {
-        return null;
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("<li>\n");
+        buffer.append(caption + "\n");
+        buffer.append("<ul>\n");
+        for (int i = 0; i < tray.size(); i++) {
+            buffer.append(tray.get(i).makeHTML());
+        }
+        buffer.append("</ul>\n");
+        buffer.append("</li>\n");
+        return buffer.toString();
     }
 }
