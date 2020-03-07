@@ -1,5 +1,5 @@
 public class Display {
-    private DisplayImpl impl;
+    protected DisplayImpl impl;
     public Display(DisplayImpl impl) {
         this.impl = impl;
     }
