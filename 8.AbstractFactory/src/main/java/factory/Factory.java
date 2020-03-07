@@ -1,8 +1,14 @@
 package factory;
 
 public abstract class Factory {
-    public static Factory getFactory() {
+    public static Factory getFactory(String classname) {
         Factory factory = null;
+        try {
+            Class targetClass = Class.forName(classname);
+            factory = (Factory) targetClass.newInstance();
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
+            e.printStackTrace();
+        }
         return factory;
     }
 
