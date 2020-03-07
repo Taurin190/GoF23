@@ -3,8 +3,6 @@ package listfactory;
 import factory.Link;
 
 public class ListLink extends Link {
-    private String caption;
-    private String url;
     public ListLink(String caption, String url) {
         super(caption);
         this.caption = caption;

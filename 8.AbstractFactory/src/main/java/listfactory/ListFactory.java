@@ -10,7 +10,6 @@ public class ListFactory extends Factory {
     public Link createLink(String caption, String url) {
         return new ListLink(caption, url);
     }
-
     @Override
     public Tray createTray(String caption) {
         return new ListTray(caption);
