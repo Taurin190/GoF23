@@ -4,6 +4,9 @@ public class OddSupport extends Support {
     }
     @Override
     protected boolean resolve(Trouble trouble) {
+        if (trouble.getNumber() % 2 == 1) {
+            return true;
+        }
         return false;
     }
 }
