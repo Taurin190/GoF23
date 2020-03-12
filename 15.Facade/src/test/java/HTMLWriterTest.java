@@ -10,7 +10,7 @@ import static org.junit.Assert.fail;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-public class HTMLWriterTest {
+public class HtmlWriterTest {
     @Mock
     private Writer writer;
     @Before
@@ -19,7 +19,7 @@ public class HTMLWriterTest {
     }
     @Test
     public void testTitle() {
-        HTMLWriter htmlWriter = new HTMLWriter(writer);
+        HtmlWriter htmlWriter = new HtmlWriter(writer);
         try {
             htmlWriter.title("test");
             verify(writer, times(1)).write("<html>\n");
@@ -34,7 +34,7 @@ public class HTMLWriterTest {
     }
     @Test
     public void testParagraph() {
-        HTMLWriter htmlWriter = new HTMLWriter(writer);
+        HtmlWriter htmlWriter = new HtmlWriter(writer);
         try {
             htmlWriter.paragraph("test");
             verify(writer, times(1)).write("<p>test</p>\n");
@@ -44,7 +44,7 @@ public class HTMLWriterTest {
     }
     @Test
     public void testLink() {
-        HTMLWriter htmlWriter = new HTMLWriter(writer);
+        HtmlWriter htmlWriter = new HtmlWriter(writer);
         try {
             htmlWriter.link("http://test.com", "test");
             verify(writer, times(1)).write("<a href=\"http://test.com\">test</a>\n");
@@ -54,7 +54,7 @@ public class HTMLWriterTest {
     }
     @Test
     public void testMailto() {
-        HTMLWriter htmlWriter = new HTMLWriter(writer);
+        HtmlWriter htmlWriter = new HtmlWriter(writer);
         try {
             htmlWriter.mailto("test@example.com", "Mr.test");
             verify(writer, times(1)).write("<a href=\"mailto:test@example.com\">Mr.test</a>\n");
@@ -64,7 +64,7 @@ public class HTMLWriterTest {
     }
     @Test
     public void testClose() {
-        HTMLWriter htmlWriter = new HTMLWriter(writer);
+        HtmlWriter htmlWriter = new HtmlWriter(writer);
         try {
             htmlWriter.close();
             verify(writer, times(1)).write("</body>\n");

@@ -1,9 +1,9 @@
 import java.io.IOException;
 import java.io.Writer;
 
-public class HTMLWriter {
+public class HtmlWriter {
     private Writer writer;
-    public HTMLWriter(Writer writer) {
+    public HtmlWriter(Writer writer) {
         this.writer = writer;
     }
     public void title(String title) throws IOException {
