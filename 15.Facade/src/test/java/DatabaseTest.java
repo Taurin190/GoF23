@@ -21,8 +21,8 @@ public class DatabaseTest {
     @Test
     public void testGetProperties() {
         Properties properties = Database.getProperties("database");
-        String actual = properties.getProperty("test");
-        assertEquals("ok", actual);
+        String actual2 = properties.getProperty("test");
+        assertEquals("ok", actual2);
     }
     @Test
     public void testGetPropertiesWithInvalidFilename() {
