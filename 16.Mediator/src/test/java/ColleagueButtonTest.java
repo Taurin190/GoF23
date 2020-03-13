@@ -10,8 +10,7 @@ public class ColleagueButtonTest {
     private ItemEvent e;
     @Test
     public void testMediator() {
-        ColleagueButton colleagueButton = new ColleagueButton();
+        ColleagueButton colleagueButton = new ColleagueButton("test_button");
         colleagueButton.setMediator(mediator);
-        colleagueButton.itemStateChanged(e);
     }
 }
